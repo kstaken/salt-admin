@@ -3,9 +3,25 @@
 /* Controllers */
 
 function AppCtrl($scope, socket) {
+  
   socket.on('send:name', function (data) {
     $scope.name = data.name;
   });
+
+  $scope.views = [
+    { name: "View 1", url: "/view1", icon: "icon-time" },
+    { name: "View 2", url: "/view2", icon: "icon-wrench" }
+  ];
+
+  $scope.selected = $scope.views[0];
+  
+  $scope.setSelected = function(view) {
+    $scope.selected = view
+  };
+
+  $scope.isSelected = function(view) {
+    return $scope.selected === view
+  };
 }
 
 function MyCtrl1($scope, socket) {

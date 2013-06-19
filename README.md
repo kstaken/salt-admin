@@ -16,6 +16,8 @@ HTML, and let AngularJS take care of interpolation on the browser side._
 *    Forked from: https://github.com/btford/angular-socket-io-seed
 *    Switched to use bower for client side dependencies
 *    Add env based port setting to app.js
+*    Use bootstrap CSS for simple display
+*    Changed view list to be generated in a more angular appropriate way
 
 ## How to use it
 
