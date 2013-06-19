@@ -2,7 +2,7 @@
   "name": "angular-socket-io-seed",
   "version": "0.0.1",
   "dependencies": {
-    "angular": "~1.0.7",
-    "bootstrap": "*"
+    "angular": ">= 1.0.7",
+    "bootstrap-css": "*"    
   }  
 }
