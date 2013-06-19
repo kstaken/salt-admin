@@ -1,5 +1,10 @@
 # Angular Socket.io Seed
 
+## Changes:
+    Forked from: https://github.com/btford/angular-socket-io-seed
+    Switched to use bower for client side dependencies
+    Add env based port setting to app.js
+
 Start an awesome app with AngularJS on the front, Socket.io + Express + Node on the back. This
 project is an application skeleton for writing [AngularJS](http://angularjs.org/) apps that use
 web sockets to add real-time functionality. If you're not planning on using web sockets, you
@@ -18,13 +23,18 @@ HTML, and let AngularJS take care of interpolation on the browser side._
 
 ## How to use it
 
-Clone the angular-socket-io-seed repository and start hacking!
+Clone the angular-socket-io-seed repository then run:
+
+     npm install
+     bower install
 
 ### Running the app
 
 Runs like a typical express app:
 
     node app.js
+
+By default the app will run on port 8080 but can be changed by setting PORT in your environment before starting.
 
 ### Running tests
 
@@ -34,17 +44,12 @@ Coming soon!
 
 Just fetch the changes and merge them into your project with git.
 
-## Example Application
-
-I created a [simple instant messaging application](https://github.com/btford/angular-socket-io-im)
-and wrote a [blog post](http://briantford.com/blog/angular-socket-io.html) walking through the app to
-illustrate using the seed.
-
 ## Directory Layout
     
     app.js              --> app config
     package.json        --> for npm
-    public/             --> all of the files to be used in on the client side
+    bower.json          --> for bower
+    public/             --> all of the app specific files to be used on the client side
       css/              --> css files
         app.css         --> default stylesheet
       img/              --> image files
@@ -53,13 +58,7 @@ illustrate using the seed.
         controllers.js  --> application controllers
         directives.js   --> custom angular directives
         filters.js      --> custom angular filters
-        services.js     --> custom angular services
-        lib/            --> angular and 3rd party JavaScript libraries
-          angular/
-            angular.js            --> the latest angular js
-            angular.min.js        --> the latest minified angular js
-            angular-*.js          --> angular add-on modules
-            version.txt           --> version number
+        services.js     --> custom angular services        
     routes/
       index.js          --> route for serving HTML pages and partials
     views/
