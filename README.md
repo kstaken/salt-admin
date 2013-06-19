@@ -21,6 +21,7 @@ HTML, and let AngularJS take care of interpolation on the browser side._
 
 Clone the angular-socket-io-seed repository then run:
 
+     npm install -g bower # if you don't already have this
      npm install
      bower install
 
