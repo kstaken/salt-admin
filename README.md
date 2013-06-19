@@ -1,18 +1,9 @@
 # Angular Socket.io Seed
 
-## Changes:
-    Forked from: https://github.com/btford/angular-socket-io-seed
-    Switched to use bower for client side dependencies
-    Add env based port setting to app.js
-
 Start an awesome app with AngularJS on the front, Socket.io + Express + Node on the back. This
 project is an application skeleton for writing [AngularJS](http://angularjs.org/) apps that use
 web sockets to add real-time functionality. If you're not planning on using web sockets, you
 should consider the [Angular Express Seed](https://github.com/btford/angular-express-seed) instead.
-
-The seed contains angular libraries, test libraries and a bunch of scripts all preconfigured for
-instant web development gratification. Just clone the repo (or download the zip/tarball) and
-you're ready to develop your application.
 
 The seed app shows how to wire together Angular client-side components with Socket.io and Express
 on the server. It also illustrates writing angular partials/views with the Jade templating library.
@@ -20,6 +11,11 @@ on the server. It also illustrates writing angular partials/views with the Jade 
 _Note: Although Jade supports interpolation, you should be doing that mostly on the client. Mixing
 server and browser templating will convolute your app. Instead, use Jade as a syntactic sugar for
 HTML, and let AngularJS take care of interpolation on the browser side._
+
+## Changes:
+*    Forked from: https://github.com/btford/angular-socket-io-seed
+*    Switched to use bower for client side dependencies
+*    Add env based port setting to app.js
 
 ## How to use it
 
