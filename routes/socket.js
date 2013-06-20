@@ -8,8 +8,8 @@ module.exports = function (socket) {
   });
 
   setInterval(function () {
-    socket.emit('send:time', {
-      time: (new Date()).toString()
+    socket.emit('send:event', {
+      event: "Simulated event " + (new Date()).toString()
     });
   }, 1000);
 };

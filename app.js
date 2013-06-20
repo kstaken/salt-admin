@@ -38,6 +38,9 @@ app.configure('production', function(){
 // Routes
 
 app.get('/', routes.index);
+
+app.get('/api/grains', routes.grains);
+app.get('/api/statetree', routes.statetree);
 app.get('/partials/:name', routes.partials);
 
 // redirect all others to the index (HTML5 history)

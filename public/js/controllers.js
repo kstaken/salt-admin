@@ -24,16 +24,20 @@ function AppCtrl($scope, $route, $location, socket) {
 }
 
 function EventsCtrl($scope, socket) {
-  socket.on('send:time', function (data) {
-    $scope.time = data.time;
+  socket.on('send:event', function (data) {
+    $scope.event = data.event;
   });
 }
-EventsCtrl.$inject = ['$scope', 'socket'];
+//EventsCtrl.$inject = ['$scope', 'socket'];
 
 
-function GrainsCtrl() {
+function GrainsCtrl($scope, $http) {
+  $http.get('api/grains').then(function(res) {
+    $scope.grains = res.data;                
+  });
 }
-GrainsCtrl.$inject = [];
+GrainsCtrl.$inject = ['$scope', '$http'];
+
 
 function PillarCtrl() {
 }

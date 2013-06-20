@@ -1,4 +1,3 @@
 p Grains
 p
-  | Showing of 'interpolate' filter:
-  | {{ 'Current version is v%VERSION%.' | interpolate }}
+  pre {{ grains | json }}
