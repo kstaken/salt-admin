@@ -1,18 +1,20 @@
 extends layout
 
 block body
-  div.container(ng-controller='AppCtrl')    
-    h2 Hello {{name}}
- 
-    div.btn-group    
-      a(href='{{view.url}}', class="btn", ng-class='{"btn-primary" : isSelected(view)}', ng-repeat='view in views', ng-click='setSelected(view)')  
-        i(class='{{ view.icon }}', ng-class='{"icon-white" : isSelected(view)}')
-        |  {{ view.name }}
-
-    div(class="well", ng-view)
+  div.container-fluid(ng-controller='AppCtrl')  
+    h2 Salt Stack Admin  
+    div.row-fluid
+      div.span2
+        ul.nav.nav-pills.nav-stacked
+          li(ng-class='{"active" : isSelected(view)}', ng-repeat='view in views | mainnav')               
+            a(href='{{view.path}}', ng-click='setSelected(view)')  
+              i(class='{{ view.icon }}', ng-class='{"icon-white" : isSelected(view)}')
+              |  {{ view.label }}
+      div.span10
+        div(class="well", ng-view)
    
     div
-      | Angular Socket.io seed app: v
+      | Salt Stack Admin: v
       span(app-version)
 
   script(src='angular/angular.js')

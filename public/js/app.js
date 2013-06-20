@@ -4,8 +4,34 @@
 // Declare app level module which depends on filters, and services
 var app = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.directives']).
   config(['$routeProvider', '$locationProvider', function($routeProvider, $locationProvider) {
-    $routeProvider.when('/view1', {templateUrl: 'partials/partial1', controller: MyCtrl1});
-    $routeProvider.when('/view2', {templateUrl: 'partials/partial2', controller: MyCtrl2});
-    $routeProvider.otherwise({redirectTo: '/view1'});
+    $routeProvider.when('/pillar-edit', {
+      templateUrl: 'partials/pillar-edit', 
+      controller: PillarCtrl, 
+      icon: "icon-wrench", 
+      label: "Edit Pillar Data", 
+      nav: "Main", 
+      path: '/pillar-edit'
+    });    
+  
+    $routeProvider.when('/grains', {
+      templateUrl: 'partials/grains', 
+      controller: GrainsCtrl, 
+      icon: "icon-time", 
+      label: "Grains", 
+      nav: "Main",
+      path: '/grains'
+    });
+  
+    $routeProvider.when('/events', {
+      templateUrl: 'partials/events', 
+      controller: EventsCtrl, 
+      icon: "icon-tags", 
+      label: "Events", 
+      nav: "Main", 
+      path: '/events'
+    });
+    
+    $routeProvider.otherwise({redirectTo: '/pillar-edit'});
+    
     $locationProvider.html5Mode(true);
   }]);
