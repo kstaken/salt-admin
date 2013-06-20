@@ -13,6 +13,15 @@ var app = angular.module('myApp', ['myApp.filters', 'myApp.services', 'myApp.dir
       path: '/pillar-edit'
     });    
   
+    $routeProvider.when('/statetree', {
+      templateUrl: 'partials/statetree', 
+      controller: StateTreeCtrl, 
+      icon: "icon-indent-left", 
+      label: "Show State Tree", 
+      nav: "Main",
+      path: '/statetree'
+    });
+
     $routeProvider.when('/grains', {
       templateUrl: 'partials/grains', 
       controller: GrainsCtrl, 

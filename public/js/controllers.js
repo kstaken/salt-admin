@@ -30,6 +30,12 @@ function EventsCtrl($scope, socket) {
 }
 //EventsCtrl.$inject = ['$scope', 'socket'];
 
+function StateTreeCtrl($scope, $http) {
+  $http.get('api/statetree').then(function(res) {
+    $scope.statetree = res.data;                
+  });
+}
+StateTreeCtrl.$inject = ['$scope', '$http'];
 
 function GrainsCtrl($scope, $http) {
   $http.get('api/grains').then(function(res) {
